@@ -118,7 +118,7 @@
       position: absolute;
       inset: 0;
       background-size: cover;
-      background-position: center 40%;
+      background-position: center center;
       opacity: 0;
       transition: opacity 1.6s ease;
     }
@@ -224,6 +224,7 @@
     .hero-cta { display: flex; gap: 20px; flex-wrap: wrap; align-items: center; }
 
     .hero-cta-note { font-size: 13px; color: rgba(255,255,255,0.6); text-shadow: 0 1px 6px rgba(0,0,0,0.9); }
+    .hero-cta-promise { font-size: 15px; color: rgba(255,255,255,0.85); text-shadow: 0 1px 6px rgba(0,0,0,0.9); margin-bottom: 14px; }
 
     .hero-divider {
       border: none;
@@ -510,6 +511,7 @@
       width: 100%;
       aspect-ratio: 4/3;
       object-fit: cover;
+      object-position: center center;
       border-radius: 6px;
       display: block;
     }
@@ -794,12 +796,13 @@
     }
 
     .brand-product-row img {
-      width: 68px;
-      height: 68px;
-      object-fit: cover;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
       border-radius: 6px;
       border: 1px solid var(--border);
       background: white;
+      padding: 6px;
     }
 
     /* ── RESPONSIVE ── */
@@ -966,7 +969,7 @@
   </div>
   <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line">
     <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-    加LINE詢問
+    加LINE詢問選型
   </a>
 </nav>
 
@@ -995,9 +998,10 @@
       <span class="cert-badge cb-slate">現貨確認即出；標準品 30–45 天</span>
     </div>
     <div class="hero-cta">
+      <p class="hero-cta-promise">說明您的應用場景，工程師 4 小時內回覆選型建議</p>
       <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line btn-line-lg">
         <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
-        立即加LINE詢問
+        加LINE說明您的需求
       </a>
       <span class="hero-cta-note">或致電 02-2687-2998</span>
     </div>
@@ -1045,7 +1049,7 @@
           <div class="brand-product-row">
             <img src="images/product-laumas-cbl.jpg" alt="壓縮式荷重元">
             <img src="images/product-laumas-ftp.jpg" alt="剪切式荷重元">
-            <img src="images/product-laumas-w200.png" alt="重量顯示器">
+            <img src="images/product-laumas-ctl.jpg" alt="柱型荷重元">
           </div>
         </div>
         <div class="brand-card-body">
@@ -1073,18 +1077,17 @@
             <span class="brand-cert bc-slate">CE</span>
             <span class="brand-cert bc-blue">ATEX</span>
             <span class="brand-cert bc-amber">OIML</span>
-            <span class="brand-cert bc-green">IP67</span>
+            <span class="brand-cert bc-green">IP65~69</span>
           </div>
           <div class="brand-product-row">
-            <img src="images/product-sensocar-2.jpg" alt="懸臂式荷重元 TA1">
-            <img src="images/product-sensocar-1.jpg" alt="剪切式荷重元 BS1">
-            <img src="images/product-sensocar-4.jpg" alt="壓縮式荷重元 SP-DC">
-            <img src="images/product-sensocar-3.jpg" alt="重量顯示器 SCA30">
+            <img src="images/FCAL.png" alt="波紋管壓縮式荷重元">
+            <img src="images/CA.png" alt="環型壓縮式荷重元">
+            <img src="images/product-sensocar-3.jpg" alt="重量顯示器">
           </div>
         </div>
         <div class="brand-card-body">
           <p class="brand-pos">
-            西班牙精密荷重元製造商，擅長 OEM 與非標客製需求。多種外形尺寸與安裝孔位可選，機構空間有限制或設計圖有特定尺寸要求的設備廠首選。不鏽鋼材質，IP67 防護，適用食品、藥廠等清潔製程環境，ATEX 型亦可選。
+            西班牙精密荷重元製造商，擅長 OEM 與非標客製需求。多種外形尺寸與安裝孔位可選，機構空間有限制或設計圖有特定尺寸要求的設備廠首選。不鏽鋼材質，IP65~69 防護，適用食品、藥廠等清潔製程環境，ATEX 型亦可選。
           </p>
           <div class="brand-products-heading">產品線</div>
           <ul class="brand-products">
@@ -1106,12 +1109,12 @@
             <span class="brand-cert bc-slate">CE</span>
             <span class="brand-cert bc-slate">NTEP</span>
             <span class="brand-cert bc-amber">OIML</span>
-            <span class="brand-cert bc-green">IP67</span>
+            <span class="brand-cert bc-green">IP65~69</span>
           </div>
           <div class="brand-product-row">
-            <img src="images/product-mkcell-bending.png" alt="懸臂式荷重元 MK-Z6">
-            <img src="images/product-mkcell-1.png" alt="剪切式荷重元">
-            <img src="images/product-mkcell-3.png" alt="重型壓縮荷重元">
+            <img src="images/product-mkcell-bending.png" alt="懸臂式荷重元">
+            <img src="images/DTX.png" alt="雙端剪切式荷重元">
+            <img src="images/PEC.png" alt="單點式荷重元">
             <img src="images/product-mkcell-2.png" alt="單點式荷重元">
           </div>
         </div>
@@ -1217,7 +1220,7 @@
     <div class="section-header">
       <span class="section-tag">應用產業</span>
       <h2>國際規格，在地服務</h2>
-      <p>從桶槽製程到製藥防爆，我們熟悉台灣設備廠的各類應用場景，協助你快速選型並完成整合</p>
+      <p>從桶槽製程到製藥防爆，我們熟悉台灣設備廠的各類應用場景，協助您快速選型並完成整合</p>
     </div>
     <div class="app-grid">
       <div class="app-card">
@@ -1246,7 +1249,7 @@
       </div>
       <div class="app-card">
         <h3>農業 / 穀倉計量</h3>
-        <p>穀物乾燥設備、飼料廠桶槽秤重、農產品計量機台。IP68 防水防塵，全量程 5 kg–750 t，選型到出貨全程技術支援。</p>
+        <p>穀物乾燥設備、飼料廠桶槽秤重、農產品計量機台。IP65~69 防水防塵，全量程 5 kg–750 t，選型到出貨全程技術支援。</p>
       </div>
       <div class="app-card">
         <h3>萬能 / 油壓試驗機</h3>
@@ -1267,7 +1270,7 @@
       <div class="why-item">
         <div class="why-num">01</div>
         <h3>35+ 台灣度量衡在地服務經驗</h3>
-        <p>深耕台灣度量衡產業逾 35 年，對製程需求、安裝問題、現場故障有第一線在地經驗。不是只賣零件——是直接給你解法。</p>
+        <p>深耕台灣度量衡產業逾 35 年，對製程需求、安裝問題、現場故障有第一線在地經驗。不是只賣零件——是直接給您解法。</p>
       </div>
       <div class="why-item">
         <div class="why-num">02</div>
@@ -1282,7 +1285,7 @@
       <div class="why-item">
         <div class="why-num">04</div>
         <h3>出貨前驗貨單確認，交期透明</h3>
-        <p>每筆訂單出貨前附上驗貨單，確認規格、序號、認證文件齊全才出。現貨確認即出；標準品 30–45 天，急單優先排程，不讓荷重元成為你的瓶頸。</p>
+        <p>每筆訂單出貨前附上驗貨單，確認規格、序號、認證文件齊全才出。現貨確認即出；標準品 30–45 天，急單優先排程，不讓荷重元成為您的瓶頸。</p>
       </div>
     </div>
   </div>
@@ -1295,12 +1298,12 @@
     <div class="section-header">
       <span class="section-tag">合作流程</span>
       <h2>三步驟，從詢問到出貨</h2>
-      <p>工程師全程跟進，不走業務轉傳</p>
+      <p>業務工程同步，精準至上</p>
     </div>
     <div class="process-steps">
       <div class="process-step">
         <div class="process-num">01</div>
-        <h3>說明你的需求</h3>
+        <h3>說明您的需求</h3>
         <p>加 LINE 或致電，描述量程、安裝方式、環境條件與認證需求。不需要先知道型號規格。</p>
       </div>
       <div class="process-arrow">
@@ -1449,7 +1452,7 @@
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
         <div class="faq-a">
-          <p>深耕台灣度量衡產業 35 年，服務 100+ 設備廠與系統整合商，涵蓋化工/製藥、食品機械、農業/飼料、包裝充填、半導體設備、材料試驗等領域。不確定是否符合你的應用？加 LINE 說明場景，當天回覆。</p>
+          <p>深耕台灣度量衡產業 35 年，服務 100+ 設備廠與系統整合商，涵蓋化工/製藥、食品機械、農業/飼料、包裝充填、半導體設備、材料試驗等領域。不確定是否符合您的應用？加 LINE 說明場景，當天回覆。</p>
         </div>
       </div>
 
@@ -1469,7 +1472,7 @@
           <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </div>
         <div class="faq-a">
-          <p>義大利品牌具備 IECEx / ATEX 防爆認證、台灣 TS 安全認證 TD140107、CE、OIML；美國品牌具備 NTEP、CE、OIML；西班牙品牌具備 ATEX、CE、OIML。Zone 1/2 防爆區域適用，IP68 / IP69K 防護等級可選。CE 符合性聲明及認證文件可隨貨提供，製藥廠稽核直接用。</p>
+          <p>義大利品牌具備 IECEx / ATEX 防爆認證、台灣 TS 安全認證 TD140107、CE、OIML；美國品牌具備 NTEP、CE、OIML；西班牙品牌具備 ATEX、CE、OIML。Zone 1/2 防爆區域適用，IP65~69 防護等級可選。CE 符合性聲明及認證文件可隨貨提供，製藥廠稽核直接用。</p>
         </div>
       </div>
 
@@ -1510,8 +1513,8 @@
 <!-- CTA -->
 <section class="cta-section">
   <div class="container">
-    <h2>你的度量衡需求，交給專業的來。</h2>
-    <p>描述你的應用場景，我們當天回覆選型建議</p>
+    <h2>您的度量衡需求，交給專業的來。</h2>
+    <p>說明您的應用場景，工程師 4 小時內回覆選型建議</p>
     <a href="https://line.me/R/ti/p/@420gwmyt" target="_blank" rel="noopener" class="btn-line btn-line-lg">
       <svg class="line-icon" viewBox="0 0 24 24"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.494.25l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
       加LINE @420gwmyt
