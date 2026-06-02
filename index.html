@@ -280,7 +280,7 @@
     }
 
     /* ── SECTION COMMON ── */
-    .section { padding: 96px 32px; }
+    .section { padding: 0 32px 96px; }
     .section-alt { background: var(--bg); }
     .container { max-width: 1080px; margin: 0 auto; }
 
@@ -293,10 +293,13 @@
       text-transform: uppercase;
       background: #EAB308;
       color: #111111;
-      padding: 11px 20px;
+      padding: 14px 32px;
       border-radius: 0;
-      margin-bottom: 28px;
       display: block;
+      margin-left: -32px;
+      margin-right: -32px;
+      width: calc(100% + 64px);
+      margin-bottom: 64px;
     }
 
     .section-header h2 {
@@ -632,8 +635,8 @@
       color: white;
     }
 
-    .cta-section h2 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; margin-bottom: 12px; color: #EAB308; }
-    .cta-section p  { font-size: 16px; color: #94A3B8; margin-bottom: 36px; }
+    .cta-section h2 { font-size: clamp(28px, 4.5vw, 48px); font-weight: 900; margin-bottom: 12px; color: white; }
+    .cta-section p  { font-size: 16px; color: rgba(255,255,255,0.75); margin-bottom: 36px; }
 
     /* ── FOOTER ── */
     footer { background: #111111; }
@@ -806,7 +809,8 @@
     }
 
     @media (max-width: 640px) {
-      .section  { padding: 56px 20px; }
+      .section  { padding: 0 20px 56px; }
+      .section-tag { margin-left: -20px; margin-right: -20px; width: calc(100% + 40px); padding: 12px 20px; margin-bottom: 40px; }
       .hero     { padding: 60px 20px 72px; }
       nav       { padding: 0 20px; }
       .nav-phone { display: none; }
@@ -835,20 +839,20 @@
     .selector-list {
       max-width: 860px;
       margin: 0 auto;
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      border: 1px solid #111111;
+      border-radius: 2px;
       overflow: hidden;
     }
     .selector-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid #111111;
       background: white;
     }
     .selector-row:last-child { border-bottom: none; }
     .selector-scenario {
       padding: 20px 24px;
-      border-right: 1px solid var(--border);
+      border-right: 1px solid #111111;
     }
     .selector-rec { padding: 20px 24px; }
     .selector-tag {
@@ -889,9 +893,9 @@
     }
     .process-step {
       background: white;
-      border-radius: 10px;
+      border-radius: 2px;
       padding: 30px 26px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      border: 1px solid #111111;
     }
     .process-num {
       font-size: 11px;
@@ -1024,9 +1028,9 @@
 
 <!-- BRANDS -->
 <section class="section" id="brands">
+  <div class="section-tag">代理品牌</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">代理品牌</span>
       <h2>多家國際品牌，全場景覆蓋</h2>
       <p>義大利防爆認證、西班牙精密製造、美國工業標準——依場景選最合適品牌</p>
     </div>
@@ -1137,9 +1141,9 @@
 
 <!-- SELECTOR 選型指南 -->
 <section class="section section-alt" id="selector">
+  <div class="section-tag">選型指南</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">選型指南</span>
       <h2>依需求快速對應</h2>
       <p>不確定要用哪個規格？依應用場景找推薦，或加 LINE 直接詢問</p>
     </div>
@@ -1214,9 +1218,9 @@
 
 <!-- APPLICATIONS -->
 <section class="section section-alt" id="applications">
+  <div class="section-tag">應用產業</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">應用產業</span>
       <h2>國際規格，在地服務</h2>
       <p>從桶槽製程到製藥防爆，我們熟悉台灣設備廠的各類應用場景，協助您快速選型並完成整合</p>
     </div>
@@ -1259,9 +1263,9 @@
 
 <!-- WHY US -->
 <section class="section" id="why-us">
+  <div class="section-tag">差異化</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">差異化</span>
       <h2>設備廠選荷重元供應商，我們的差異</h2>
     </div>
     <div class="why-grid">
@@ -1292,9 +1296,9 @@
 
 <!-- PROCESS 合作流程 -->
 <section class="section section-alt" id="process">
+  <div class="section-tag">合作流程</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">合作流程</span>
       <h2>三步驟，從詢問到出貨</h2>
       <p>業務工程同步，精準至上</p>
     </div>
@@ -1332,9 +1336,9 @@
 
 <!-- CASES -->
 <section class="section" id="cases">
+  <div class="section-tag">現場實績</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">現場實績</span>
       <h2>真實案例，完整紀錄</h2>
       <p>以下案例均已匿名，呈現從需求確認到現場驗收的真實交付流程</p>
     </div>
@@ -1437,9 +1441,9 @@
 
 <!-- FAQ -->
 <section class="section section-alt" id="faq">
+  <div class="section-tag">常見問題</div>
   <div class="container">
     <div class="section-header">
-      <span class="section-tag">常見問題</span>
       <h2>工程師常問的問題</h2>
     </div>
     <div class="faq-list">
