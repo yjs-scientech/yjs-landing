@@ -287,23 +287,23 @@
     .section-header { margin-bottom: 56px; }
 
     .section-tag {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 3px;
       text-transform: uppercase;
       background: #EAB308;
-      color: #0F172A;
-      padding: 2px 10px;
-      border-radius: 2px;
-      margin-bottom: 16px;
-      display: inline-block;
+      color: #111111;
+      padding: 11px 20px;
+      border-radius: 0;
+      margin-bottom: 28px;
+      display: block;
     }
 
     .section-header h2 {
-      font-size: clamp(28px, 3.5vw, 40px);
+      font-size: clamp(32px, 4vw, 48px);
       font-weight: 900;
       margin-bottom: 16px;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
     .section-header p { font-size: 15px; color: var(--text-mid); max-width: 560px; line-height: 1.8; }
@@ -316,12 +316,12 @@
     }
 
     .brand-card {
-      border-radius: 10px;
+      border-radius: 2px;
       overflow: hidden;
       background: white;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+      border: 1px solid #111111;
     }
 
     .brand-card-head { padding: 24px 22px; border-bottom: 1px solid var(--border); background: #F5F5F5; }
@@ -367,17 +367,16 @@
     }
 
     .brand-products-heading {
-      font-size: 10px;
-      font-weight: 700;
+      font-size: 11px;
+      font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
       background: #EAB308;
-      color: #0F172A;
-      padding: 2px 8px;
-      border-radius: 2px;
-      display: inline-block;
-      align-self: flex-start;
-      margin-bottom: 10px;
+      color: #111111;
+      padding: 5px 12px;
+      border-radius: 0;
+      display: block;
+      margin-bottom: 12px;
     }
 
     .brand-products { list-style: none; flex: 1; }
@@ -386,13 +385,10 @@
       font-size: 13px;
       color: var(--text-mid);
       padding: 6px 0;
-      border-bottom: 1px solid var(--border);
       display: flex;
       align-items: center;
       gap: 8px;
     }
-
-    .brand-products li:last-child { border-bottom: none; }
 
     .brand-products li::before {
       content: '';
@@ -423,9 +419,9 @@
 
     .app-card {
       background: white;
-      border-radius: 8px;
+      border-radius: 2px;
       padding: 24px 20px;
-      box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+      border: 1px solid #111111;
     }
 
     .app-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
@@ -435,16 +431,16 @@
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--border);
-      border-radius: 10px;
+      border: 1px solid #111111;
+      border-radius: 2px;
       overflow: hidden;
       background: white;
     }
 
     .why-item {
       padding: 36px 32px;
-      border-bottom: 1px solid var(--border);
-      border-right: 1px solid var(--border);
+      border-bottom: 1px solid #111111;
+      border-right: 1px solid #111111;
     }
 
     .why-item:nth-child(2n)   { border-right: none; }
@@ -476,8 +472,8 @@
 
     .case-challenge {
       background: white;
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      border: 1px solid #111111;
+      border-radius: 2px;
       padding: 20px 24px;
       margin-bottom: 24px;
     }
@@ -524,8 +520,8 @@
     .case-outcome {
       padding: 14px 18px;
       background: white;
-      border-radius: 8px;
-      border: 1px solid var(--border);
+      border-radius: 2px;
+      border: 1px solid #111111;
     }
 
     .case-outcome-label {
@@ -941,7 +937,6 @@
     .footer-links a { color: #94A3B8; }
 
     /* ── MICRO-TEXT FLOOR: B2B 可讀性，最小 12px ── */
-    .section-tag,
     .footer-col-title,
     .why-num,
     .process-num,
