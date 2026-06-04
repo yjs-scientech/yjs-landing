@@ -8,6 +8,31 @@
     @page { size: A4; margin: 0; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* Download bar — screen only, hidden when printing */
+    .download-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #111111;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 999;
+      font-family: 'Noto Sans TC', sans-serif;
+    }
+    .download-bar span { font-size: 13px; color: #94A3B8; }
+    .download-btn {
+      background: #FCD34D;
+      color: #111111;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 7px 18px;
+      letter-spacing: 0.5px;
+    }
+    .download-btn:hover { background: #F59E0B; }
+    @media print { .download-bar { display: none; } }
+
     body {
       font-family: 'Noto Sans TC', -apple-system, sans-serif;
       background: white;
@@ -231,6 +256,12 @@
   </style>
 </head>
 <body>
+
+  <!-- DOWNLOAD BAR (screen only) -->
+  <div class="download-bar">
+    <span>勇吉興衡器 — 荷重元選配合作 · 一頁簡介</span>
+    <a href="brochure.pdf" download="勇吉興衡器-荷重元選配合作.pdf" class="download-btn">↓ 下載 PDF</a>
+  </div>
 
   <!-- HEADER -->
   <div class="header">
