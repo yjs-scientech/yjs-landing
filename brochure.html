@@ -48,13 +48,13 @@
     /* HEADER */
     .header {
       background: #111111;
-      padding: 14px 26px;
+      padding: 11px 26px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-shrink: 0;
     }
-    .header-logo img { height: 72px; width: auto; display: block; }
+    .header-logo img { height: 60px; width: auto; display: block; }
     .header-right { text-align: right; }
     .header-right .co-name { font-size: 14px; font-weight: 700; color: white; }
     .header-right .co-en   { font-size: 11px; color: #94A3B8; margin-top: 2px; }
@@ -62,7 +62,7 @@
     /* YELLOW BANNER */
     .kicker {
       background: #FCD34D;
-      padding: 9px 26px;
+      padding: 7px 26px;
       font-size: 12px;
       font-weight: 800;
       letter-spacing: 2.5px;
@@ -74,10 +74,10 @@
     /* MAIN CONTENT — flex:1 fills remaining height between kicker and footer */
     .content {
       flex: 1;
-      padding: 16px 24px 10px;
+      padding: 13px 22px 8px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       min-height: 0;
     }
 
@@ -85,31 +85,27 @@
     .brands {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 14px;
+      gap: 12px;
     }
     .brand-card {
       border: 1px solid #111111;
-      padding: 20px 18px;
+      padding: 14px 15px;
     }
     .brand-card-top {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 14px;
-      padding-bottom: 14px;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
       border-bottom: 1px solid #E2E8F0;
     }
     .brand-card-top img {
-      height: 40px;
+      height: 38px;
       width: auto;
-      max-width: 110px;
+      max-width: 160px;
       object-fit: contain;
       object-position: left center;
-    }
-    .brand-card-top img.logo-sq {
-      height: 66px;
-      width: 66px;
-      max-width: 66px;
+      display: block;
     }
     .brand-origin {
       font-size: 11px;
@@ -121,18 +117,27 @@
     .brand-desc {
       font-size: 12px;
       color: #475569;
-      line-height: 1.9;
-      margin-bottom: 12px;
+      line-height: 1.7;
+      margin-bottom: 8px;
     }
-    .brand-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .brand-tags { display: flex; gap: 5px; flex-wrap: wrap; }
     .brand-tag {
-      font-size: 11px;
+      font-size: 10.5px;
       font-weight: 700;
       background: #F8FAFC;
       color: #111111;
-      padding: 3px 9px;
+      padding: 2px 8px;
       border: 1px solid #CBD5E1;
     }
+    .brand-url {
+      display: block;
+      font-size: 10.5px;
+      color: #94A3B8;
+      text-decoration: none;
+      margin-top: 7px;
+      letter-spacing: 0.2px;
+    }
+    .brand-url:hover { color: #FCD34D; }
 
     /* ── SECTION LABEL ── */
     .section-label {
@@ -143,14 +148,14 @@
       text-transform: uppercase;
       background: #FCD34D;
       color: #111111;
-      padding: 5px 10px;
-      margin-bottom: 10px;
+      padding: 4px 10px;
+      margin-bottom: 8px;
     }
 
     /* ── PAIN POINTS ── */
     .pain-points {
-      margin: -16px -24px 0;
-      padding: 16px 24px 14px;
+      margin: -13px -22px 0;
+      padding: 12px 22px 11px;
       background: #111111;
     }
     .pain-grid {
@@ -160,7 +165,7 @@
       border: 1px solid #2D3748;
     }
     .pain-item {
-      padding: 14px 16px;
+      padding: 11px 14px;
       border-right: 1px solid #2D3748;
     }
     .pain-item:last-child { border-right: none; }
@@ -185,12 +190,12 @@
     .products-grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 10px;
+      gap: 8px;
     }
     .product-item { text-align: center; }
     .product-item img {
       width: 100%;
-      height: 90px;
+      height: 78px;
       object-fit: contain;
     }
     .product-name { font-size: 11.5px; font-weight: 700; margin-top: 6px; }
@@ -203,10 +208,10 @@
       border: 1px solid #111111;
     }
     .feature-item {
-      padding: 13px 14px;
+      padding: 10px 12px;
       display: flex;
       align-items: flex-start;
-      gap: 9px;
+      gap: 8px;
       border-right: 1px solid #111111;
       border-bottom: 1px solid #111111;
     }
@@ -221,7 +226,7 @@
       display: flex;
       align-items: center;
       gap: 18px;
-      padding: 12px 0;
+      padding: 8px 0;
       border-top: 1px solid #E2E8F0;
     }
     .certs-label {
@@ -238,7 +243,7 @@
     /* FOOTER */
     .footer {
       background: #111111;
-      padding: 13px 26px;
+      padding: 11px 26px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -302,7 +307,7 @@
     <div class="brands">
       <div class="brand-card">
         <div class="brand-card-top">
-          <img src="images/Brand LOGO/SENSOCAR-LOGO-600x600-1.png" alt="Sensocar" class="logo-sq">
+          <img src="images/Brand LOGO/SENSOCAR-LOGO-600x600-1.png" alt="Sensocar">
           <span class="brand-origin">西班牙 · 荷重元製造商</span>
         </div>
         <div class="brand-desc">
@@ -317,6 +322,7 @@
           <span class="brand-tag">OEM 客製</span>
           <span class="brand-tag">安裝配件全備</span>
         </div>
+        <a href="https://www.sensocar.com/en/load-cells" class="brand-url" target="_blank">↗ sensocar.com</a>
       </div>
       <div class="brand-card">
         <div class="brand-card-top">
@@ -335,6 +341,7 @@
           <span class="brand-tag">Accredia Lab</span>
           <span class="brand-tag">RS485 / Modbus</span>
         </div>
+        <a href="https://www.laumas.com/en/" class="brand-url" target="_blank">↗ laumas.com</a>
       </div>
     </div>
 
