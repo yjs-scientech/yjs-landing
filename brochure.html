@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <title>勇吉興衡器 — 荷重元選配合作</title>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <!-- Local CJK font for PDF; Noto Sans TC fallback for non-Windows browsers -->
+  <style>
+    @font-face { font-family: 'CJK'; src: local('Microsoft JhengHei'), local('微軟正黑體'), local('PingFang TC'), local('Noto Sans TC'); }
+  </style>
   <style>
     @page { size: A4; margin: 0; }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -17,7 +20,7 @@
       align-items: center;
       justify-content: space-between;
       z-index: 999;
-      font-family: 'Noto Sans TC', sans-serif;
+      font-family: 'Microsoft JhengHei', '微軟正黑體', 'Noto Sans TC', sans-serif;
     }
     .download-bar span { font-size: 13px; color: #94A3B8; }
     .download-btn {
@@ -31,7 +34,7 @@
     @media print { .download-bar { display: none; } }
 
     body {
-      font-family: 'Noto Sans TC', -apple-system, sans-serif;
+      font-family: 'Microsoft JhengHei', '微軟正黑體', 'Noto Sans TC', -apple-system, sans-serif;
       background: white;
       color: #111111;
       width: 210mm;
@@ -71,7 +74,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background-image: url('images/安裝現場/case1-loadcell-mount.jpg');
+      background-image: url('images/安裝現場/case1-loadcell-mount-web.jpg');
       background-size: cover;
       background-position: center 40%;
     }
@@ -449,7 +452,7 @@
   <!-- CTA -->
   <div class="cta">
     <div class="cta-qr">
-      <img src="images/line-qr.png" alt="LINE QR Code">
+      <img src="images/S__27279363-removebg-preview.png" alt="LINE QR Code">
     </div>
     <div class="cta-body">
       <div class="cta-action">您的度量衡需求，交給專業的來。</div>
