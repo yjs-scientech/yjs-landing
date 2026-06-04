@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>勇吉興衡器 — 荷重元選配合作</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans TC', -apple-system, sans-serif;
+      background: white;
+      color: #111111;
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* HEADER */
+    .header {
+      background: #111111;
+      padding: 14px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .header-logo img { height: 48px; width: auto; }
+    .header-right { text-align: right; }
+    .header-right .co-name { font-size: 14px; font-weight: 700; color: white; }
+    .header-right .co-en   { font-size: 11px; color: #64748B; margin-top: 2px; }
+
+    /* YELLOW BANNER */
+    .kicker {
+      background: #FCD34D;
+      padding: 9px 26px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #111111;
+      flex-shrink: 0;
+    }
+
+    /* MAIN CONTENT — flex:1 fills remaining height between kicker and footer */
+    .content {
+      flex: 1;
+      padding: 16px 24px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    /* ── BRANDS ── */
+    .brands {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .brand-card {
+      border: 1px solid #111111;
+      padding: 20px 18px;
+    }
+    .brand-card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .brand-card-top img {
+      height: 40px;
+      width: auto;
+      max-width: 110px;
+      object-fit: contain;
+      object-position: left center;
+    }
+    .brand-card-top img.logo-sq {
+      height: 66px;
+      width: 66px;
+      max-width: 66px;
+    }
+    .brand-origin {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #94A3B8;
+    }
+    .brand-desc {
+      font-size: 12px;
+      color: #475569;
+      line-height: 1.9;
+      margin-bottom: 12px;
+    }
+    .brand-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .brand-tag {
+      font-size: 11px;
+      font-weight: 700;
+      background: #F8FAFC;
+      color: #111111;
+      padding: 3px 9px;
+      border: 1px solid #CBD5E1;
+    }
+
+    /* ── SECTION LABEL ── */
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: #FCD34D;
+      color: #111111;
+      padding: 5px 10px;
+      margin-bottom: 10px;
+    }
+
+    /* ── PAIN POINTS ── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0;
+      border: 1px solid #111111;
+    }
+    .pain-item {
+      padding: 13px 15px;
+      border-right: 1px solid #111111;
+    }
+    .pain-item:last-child { border-right: none; }
+    .pain-problem {
+      font-size: 12px;
+      font-weight: 700;
+      color: #94A3B8;
+      margin-bottom: 7px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .pain-problem::before { content: "✕  "; color: #CBD5E1; }
+    .pain-solution {
+      font-size: 12px;
+      font-weight: 700;
+      color: #111111;
+      line-height: 1.6;
+    }
+    .pain-solution::before { content: "✓  "; color: #FCD34D; font-weight: 900; }
+
+    /* ── PRODUCTS ── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+    .product-item { text-align: center; }
+    .product-item img {
+      width: 100%;
+      height: 90px;
+      object-fit: contain;
+    }
+    .product-name { font-size: 11.5px; font-weight: 700; margin-top: 6px; }
+    .product-spec { font-size: 10px; color: #64748B; margin-top: 3px; line-height: 1.45; }
+
+    /* ── FEATURES ── */
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border: 1px solid #111111;
+    }
+    .feature-item {
+      padding: 13px 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      border-right: 1px solid #111111;
+      border-bottom: 1px solid #111111;
+    }
+    .feature-item:nth-child(3n)  { border-right: none; }
+    .feature-item:nth-child(n+4) { border-bottom: none; }
+    .feature-check { color: #FCD34D; font-weight: 900; font-size: 15px; flex-shrink: 0; line-height: 1.5; }
+    .feature-text  { font-size: 12px; font-weight: 700; line-height: 1.5; }
+    .feature-sub   { font-size: 10.5px; color: #64748B; margin-top: 2px; }
+
+    /* ── CERTS ── */
+    .certs {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 12px 0;
+      border-top: 1px solid #E2E8F0;
+    }
+    .certs-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #94A3B8;
+      white-space: nowrap;
+    }
+    .certs-logos { display: flex; align-items: center; gap: 18px; }
+    .certs-logos img { height: 28px; width: auto; object-fit: contain; opacity: 0.85; }
+
+    /* FOOTER */
+    .footer {
+      background: #111111;
+      padding: 13px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .footer-name   { font-size: 13px; font-weight: 700; color: white; margin-bottom: 3px; }
+    .footer-detail { font-size: 11.5px; color: #94A3B8; line-height: 1.8; }
+    .footer-right  { text-align: right; }
+    .footer-url    { color: #FCD34D; font-size: 11.5px; font-weight: 700; text-decoration: none; }
+    .footer-addr   { font-size: 10.5px; color: #475569; margin-top: 3px; }
+
+    @media print {
+      body { width: 210mm; height: 297mm; overflow: hidden; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-logo">
+      <img src="images/YJS LOGO/yjs-logo.png" alt="勇吉興衡器">
+    </div>
+    <div class="header-right">
+      <div class="co-name">勇吉興衡器有限公司</div>
+      <div class="co-en">Y.J.S. Scientech Co., Ltd</div>
+    </div>
+  </div>
+
+  <!-- YELLOW BANNER -->
+  <div class="kicker">工業荷重元專業代理 · 35 年台灣在地服務 · 歐洲品牌直接進口</div>
+
+  <div class="content">
+
+    <!-- BRANDS -->
+    <div class="brands">
+      <div class="brand-card">
+        <div class="brand-card-top">
+          <img src="images/Brand LOGO/SENSOCAR-LOGO-600x600-1.png" alt="Sensocar" class="logo-sq">
+          <span class="brand-origin">西班牙 · 荷重元製造商</span>
+        </div>
+        <div class="brand-desc">
+          1990 年代創立於巴塞隆納，自有工廠從設計到生產全自主，非貼牌，品質完整可追溯。<br>
+          ISO 9001 認證；內建 R&D 實驗室，能客製開發市面上沒有的規格。<br>
+          荷重元全系列 + 安裝配件（桶槽足座、接線盒、防傾系統）一站供應，不需找第二家。
+        </div>
+        <div class="brand-tags">
+          <span class="brand-tag">ISO 9001</span>
+          <span class="brand-tag">OIML / ATEX</span>
+          <span class="brand-tag">IP65~69</span>
+          <span class="brand-tag">OEM 客製</span>
+          <span class="brand-tag">安裝配件全備</span>
+        </div>
+      </div>
+      <div class="brand-card">
+        <div class="brand-card-top">
+          <img src="images/Brand LOGO/Laumas.png" alt="Laumas">
+          <span class="brand-origin">義大利 · 荷重元 + 計量系統</span>
+        </div>
+        <div class="brand-desc">
+          1984 年創立，自有 Accredia ISO/IEC 17025 認證校正實驗室。<br>
+          Hygienic Line 通過 3-A Sanitary Standard，耐 CIP 高壓清洗；ATEX / IECEx 防爆系列全備。<br>
+          Barilla、Nestlé、Danone、Ferrero、BASF、Bayer 長期指定使用。
+        </div>
+        <div class="brand-tags">
+          <span class="brand-tag">3-A Sanitary</span>
+          <span class="brand-tag">ATEX / IECEx</span>
+          <span class="brand-tag">CE / OIML</span>
+          <span class="brand-tag">Accredia Lab</span>
+          <span class="brand-tag">RS485 / Modbus</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAIN POINTS -->
+    <div class="pain-points">
+      <div class="section-label">桶槽設備廠常見困境</div>
+      <div class="pain-grid">
+        <div class="pain-item">
+          <div class="pain-problem">衛生認證文件不齊</div>
+          <div class="pain-solution">CE / OIML / ATEX 文件備齊，依需求提供</div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-problem">供應商交期不穩</div>
+          <div class="pain-solution">現貨確認即出；標準品 30–45 天</div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-problem">安裝後找不到人處理</div>
+          <div class="pain-solution">業務工程師直接對口，不走業務轉傳</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="products">
+      <div class="section-label">代表產品</div>
+      <div class="products-grid">
+        <div class="product-item">
+          <img src="images/Load cell去背圖片/FCAL-removebg-preview.png" alt="FCAL">
+          <div class="product-name">Sensocar FCAL</div>
+          <div class="product-spec">壓縮型 · 不鏽鋼<br>IP68 · OIML</div>
+        </div>
+        <div class="product-item">
+          <img src="images/Load cell去背圖片/CA-removebg-preview.png" alt="CA">
+          <div class="product-name">Sensocar CA</div>
+          <div class="product-spec">單點型 · 食品級<br>IP67 · ATEX</div>
+        </div>
+        <div class="product-item">
+          <img src="images/Load cell去背圖片/product-sensocar-4-removebg-preview.png" alt="Sensocar">
+          <div class="product-name">Sensocar 系列</div>
+          <div class="product-spec">防爆型<br>ATEX · IECEx</div>
+        </div>
+        <div class="product-item">
+          <img src="images/Load cell去背圖片/product-laumas-w200-removebg-preview.png" alt="W200">
+          <div class="product-name">Laumas W200</div>
+          <div class="product-spec">計量顯示器<br>CE · OIML</div>
+        </div>
+        <div class="product-item">
+          <img src="images/Load cell去背圖片/product-laumas-ftp-removebg-preview.png" alt="FTP">
+          <div class="product-name">Laumas FTP</div>
+          <div class="product-spec">防爆型顯示器<br>ATEX</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features">
+      <div class="section-label">我們能提供</div>
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <div>
+            <div class="feature-text">全系列不鏽鋼</div>
+            <div class="feature-sub">耐 CIP 高壓清洗</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <div>
+            <div class="feature-text">5 kg～750 t 全量程</div>
+            <div class="feature-sub">壓縮、剪切、單點多型式可選</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <div>
+            <div class="feature-text">國際認證 實務放心</div>
+            <div class="feature-sub">出廠文件隨貨附上</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <div>
+            <div class="feature-text">業務工程師直接對口</div>
+            <div class="feature-sub">選型 → 安裝 → 驗收一路陪</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <div>
+            <div class="feature-text">現貨確認即出</div>
+            <div class="feature-sub">標準品 30–45 天，急單優先</div>
+          </div>
+        </div>
+        <div class="feature-item">
+          <span class="feature-check">✓</span>
+          <div>
+            <div class="feature-text">出貨前驗貨單確認</div>
+            <div class="feature-sub">規格、序號、認證文件齊才出</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CERTS -->
+    <div class="certs">
+      <span class="certs-label">認證</span>
+      <div class="certs-logos">
+        <img src="images/相關認證/cert-atex.png" alt="ATEX">
+        <img src="images/相關認證/cert-iecex.png" alt="IECEx">
+        <img src="images/相關認證/cert-ce-removebg-preview.png" alt="CE">
+        <img src="images/相關認證/cert-oiml-removebg-preview.png" alt="OIML">
+        <img src="images/相關認證/cert-ts-removebg-preview.png" alt="TS">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="footer-name">Eadon 謝宗穎　｜　商務開發</div>
+      <div class="footer-detail">
+        02-2687-2998　｜　eadonhsieh@gmail.com　｜　LINE @420gwmyt
+      </div>
+    </div>
+    <div class="footer-right">
+      <a class="footer-url" href="https://yjs-scientech.github.io">yjs-scientech.github.io</a>
+      <div class="footer-addr">新北市樹林區千歲街 63-1 號（1F）</div>
+    </div>
+  </div>
+
+</body>
+</html>
