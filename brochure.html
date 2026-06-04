@@ -123,30 +123,35 @@
     }
 
     /* ── PAIN POINTS ── */
+    .pain-points {
+      margin: -16px -24px 0;
+      padding: 16px 24px 14px;
+      background: #111111;
+    }
     .pain-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       gap: 0;
-      border: 1px solid #111111;
+      border: 1px solid #2D3748;
     }
     .pain-item {
-      padding: 13px 15px;
-      border-right: 1px solid #111111;
+      padding: 14px 16px;
+      border-right: 1px solid #2D3748;
     }
     .pain-item:last-child { border-right: none; }
     .pain-problem {
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 700;
-      color: #94A3B8;
-      margin-bottom: 7px;
-      padding-bottom: 7px;
-      border-bottom: 1px solid #E2E8F0;
+      color: #FFFFFF;
+      margin-bottom: 8px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #2D3748;
     }
-    .pain-problem::before { content: "✕  "; color: #CBD5E1; }
+    .pain-problem::before { content: "✕  "; color: #475569; }
     .pain-solution {
       font-size: 11px;
       font-weight: 700;
-      color: #111111;
+      color: #CBD5E1;
       line-height: 1.6;
     }
     .pain-solution::before { content: "✓  "; color: #FCD34D; font-weight: 900; }
@@ -243,6 +248,25 @@
 
   <div class="content">
 
+    <!-- PAIN POINTS -->
+    <div class="pain-points">
+      <div class="section-label">桶槽設備廠常見困境</div>
+      <div class="pain-grid">
+        <div class="pain-item">
+          <div class="pain-problem">衛生認證文件不齊</div>
+          <div class="pain-solution">IECEx · ATEX · TS 認證規格產品直選</div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-problem">供應商交期不穩</div>
+          <div class="pain-solution">現貨確認即出；標準品 30–45 天</div>
+        </div>
+        <div class="pain-item">
+          <div class="pain-problem">安裝後找不到人處理</div>
+          <div class="pain-solution">業務工程師直接對口，不走業務轉傳</div>
+        </div>
+      </div>
+    </div>
+
     <!-- BRANDS -->
     <div class="brands">
       <div class="brand-card">
@@ -279,25 +303,6 @@
           <span class="brand-tag">CE / OIML</span>
           <span class="brand-tag">Accredia Lab</span>
           <span class="brand-tag">RS485 / Modbus</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PAIN POINTS -->
-    <div class="pain-points">
-      <div class="section-label">桶槽設備廠常見困境</div>
-      <div class="pain-grid">
-        <div class="pain-item">
-          <div class="pain-problem">衛生認證文件不齊</div>
-          <div class="pain-solution">IECEx · ATEX · TS 認證規格產品直選</div>
-        </div>
-        <div class="pain-item">
-          <div class="pain-problem">供應商交期不穩</div>
-          <div class="pain-solution">現貨確認即出；標準品 30–45 天</div>
-        </div>
-        <div class="pain-item">
-          <div class="pain-problem">安裝後找不到人處理</div>
-          <div class="pain-solution">業務工程師直接對口，不走業務轉傳</div>
         </div>
       </div>
     </div>
