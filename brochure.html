@@ -57,7 +57,7 @@
     .header-logo img { height: 48px; width: auto; display: block; }
     .header-right { text-align: right; }
     .header-right .co-name { font-size: 13px; font-weight: 700; color: white; }
-    .header-right .co-en   { font-size: 10px; color: #94A3B8; margin-top: 2px; }
+    .header-right .co-en   { font-size: 10px; color: #CBD5E1; margin-top: 2px; }
 
     /* ── HERO ── */
     .hero {
@@ -111,11 +111,11 @@
       gap: 10px;
       padding-left: 17px;
     }
-    .hero-sub .dot { color: #64748B; font-weight: 400; }
+    .hero-sub .dot { color: #94A3B8; font-weight: 400; }
 
     /* ── PAIN POINTS ── */
     .pain-points {
-      height: 48mm;
+      height: 46mm;
       flex-shrink: 0;
       overflow: hidden;
       background: #111111;
@@ -128,43 +128,43 @@
       display: inline-block;
       font-size: 10px;
       font-weight: 800;
-      letter-spacing: 2.5px;
+      letter-spacing: 2px;
       text-transform: uppercase;
-      color: #94A3B8;
-      margin-bottom: 8px;
-      border-left: 2px solid #FCD34D;
-      padding-left: 6px;
+      color: #111111;
+      background: #FCD34D;
+      padding: 3px 10px;
+      margin-bottom: 10px;
     }
     .pain-grid {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      border: 1px solid #2D3748;
+      border: 1.5px solid #374151;
     }
     .pain-item {
       padding: 13px 16px;
-      border-right: 1px solid #2D3748;
+      border-right: 1.5px solid #374151;
     }
     .pain-item:last-child { border-right: none; }
     .pain-problem {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 700;
       color: #FFFFFF;
-      margin-bottom: 6px;
-      padding-bottom: 6px;
-      border-bottom: 1px solid #2D3748;
+      margin-bottom: 7px;
+      padding-bottom: 7px;
+      border-bottom: 1.5px solid #374151;
     }
-    .pain-problem::before { content: "✕  "; color: #475569; }
+    .pain-problem::before { content: "✕  "; color: #94A3B8; }
     .pain-solution {
-      font-size: 12.5px;
+      font-size: 13px;
       font-weight: 700;
-      color: #CBD5E1;
+      color: #E2E8F0;
       line-height: 1.6;
     }
     .pain-solution::before { content: "✓  "; color: #FCD34D; font-weight: 900; }
 
     /* ── DIFFERENTIATORS ── */
     .diff {
-      height: 48mm;
+      height: 46mm;
       flex-shrink: 0;
       overflow: hidden;
       background: #F8FAFC;
@@ -189,19 +189,19 @@
       font-weight: 900;
       color: #FCD34D;
       background: #111111;
-      min-width: 26px;
-      height: 26px;
+      min-width: 28px;
+      height: 28px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .diff-text { font-size: 14px; font-weight: 700; color: #111111; line-height: 1.4; }
-    .diff-sub  { font-size: 11.5px; color: #475569; margin-top: 2px; }
+    .diff-text { font-size: 14.5px; font-weight: 700; color: #111111; line-height: 1.4; }
+    .diff-sub  { font-size: 12px; color: #374151; margin-top: 2px; }
 
     /* ── PROOF (brands + products) ── */
     .proof {
-      height: 64mm;
+      height: 62mm;
       flex-shrink: 0;
       overflow: hidden;
       padding: 0 26px;
@@ -216,7 +216,7 @@
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #94A3B8;
+      color: #475569;
       margin-bottom: 4px;
     }
     .brands-row {
@@ -224,9 +224,9 @@
       align-items: center;
       gap: 18px;
     }
-    .brands-row img { height: 32px; width: auto; object-fit: contain; opacity: 0.85; }
+    .brands-row img { height: 36px; width: auto; object-fit: contain; opacity: 0.9; }
     .divider-v { width: 1px; height: 26px; background: #CBD5E1; }
-    .brands-note { font-size: 11.5px; color: #94A3B8; }
+    .brands-note { font-size: 11.5px; color: #475569; }
     .products-row {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
@@ -234,12 +234,12 @@
     }
     .product-item { text-align: center; }
     .product-item img { width: 100%; height: 78px; object-fit: contain; }
-    .product-name { font-size: 12px; font-weight: 700; margin-top: 4px; }
-    .product-spec { font-size: 11px; color: #64748B; margin-top: 2px; line-height: 1.4; }
+    .product-name { font-size: 13px; font-weight: 700; margin-top: 4px; }
+    .product-spec { font-size: 11.5px; color: #374151; margin-top: 2px; line-height: 1.4; }
 
     /* ── CERTS ── */
     .certs {
-      height: 28mm;
+      height: 26mm;
       flex-shrink: 0;
       overflow: hidden;
       background: #F8FAFC;
@@ -255,7 +255,7 @@
       align-items: center;
       gap: 24px;
     }
-    .certs-row img { height: 38px; width: auto; object-fit: contain; opacity: 0.85; }
+    .certs-row img { height: 44px; width: auto; object-fit: contain; opacity: 0.9; }
 
     /* ── CTA ── */
     .cta {
@@ -267,10 +267,24 @@
       align-items: center;
       gap: 24px;
     }
+    .cta-qr {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+    }
     .cta-qr img {
-      width: 110px;
-      height: 110px;
+      width: 100px;
+      height: 100px;
       display: block;
+    }
+    .cta-qr .cta-id {
+      font-size: 11px;
+      font-weight: 700;
+      color: #94A3B8;
+      letter-spacing: 0.5px;
+      text-align: center;
+      margin-top: 0;
     }
     .cta-body { flex: 1; }
     .cta-action {
@@ -286,15 +300,42 @@
       line-height: 1.75;
     }
     .cta-id {
-      font-size: 11.5px;
+      font-size: 11px;
       font-weight: 700;
-      color: #64748B;
+      color: #94A3B8;
       margin-top: 5px;
       letter-spacing: 0.5px;
     }
+    .cta-steps {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 0 6px;
+    }
+    .cta-step { display: flex; align-items: center; gap: 6px; }
+    .step-num {
+      font-size: 22px;
+      font-weight: 900;
+      color: #FCD34D;
+      flex-shrink: 0;
+    }
+    .step-text {
+      font-size: 13px;
+      font-weight: 700;
+      color: #CBD5E1;
+      line-height: 1.35;
+    }
+    .step-text small {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: #94A3B8;
+    }
+    .cta-arrow { color: #64748B; font-size: 14px; flex-shrink: 0; }
+
     .cta-contact { text-align: right; }
     .cta-contact .name   { font-size: 13px; font-weight: 700; color: white; margin-bottom: 5px; }
-    .cta-contact .detail { font-size: 11px; color: #94A3B8; line-height: 1.85; }
+    .cta-contact .detail { font-size: 11px; color: #CBD5E1; line-height: 1.85; }
     .cta-contact .url    { display: block; font-size: 11px; color: #FCD34D; font-weight: 700;
                            text-decoration: none; margin-top: 5px; }
 
@@ -337,15 +378,15 @@
     <div class="pain-grid">
       <div class="pain-item">
         <div class="pain-problem">衛生認證文件不齊</div>
-        <div class="pain-solution">IECEx · ATEX · TS 認證規格產品直選</div>
+        <div class="pain-solution">IECEx · ATEX · TS 規格直選</div>
       </div>
       <div class="pain-item">
         <div class="pain-problem">供應商交期不穩</div>
-        <div class="pain-solution">現貨確認即出；標準品 30–45 天</div>
+        <div class="pain-solution">現貨即出；標準品 30–45 天</div>
       </div>
       <div class="pain-item">
         <div class="pain-problem">安裝後找不到人</div>
-        <div class="pain-solution">業務工程師直接對口，不走業務轉傳</div>
+        <div class="pain-solution">業務工程師直接對口，不轉手</div>
       </div>
     </div>
   </div>
@@ -452,15 +493,27 @@
   <!-- CTA -->
   <div class="cta">
     <div class="cta-qr">
-      <img src="images/S__27279363-removebg-preview.png" alt="LINE QR Code">
+      <img src="images/S__141901872.jpg" alt="LINE QR Code">
+      <div class="cta-id">LINE / 電話：0905-850-555</div>
     </div>
     <div class="cta-body">
       <div class="cta-action">您的度量衡需求，交給專業的來。</div>
-      <div class="cta-sub">
-        業務工程師當天回覆<br>
-        直接附選型建議與報價，不用等轉達
+      <div class="cta-steps">
+        <div class="cta-step">
+          <span class="step-num">①</span>
+          <span class="step-text">說明需求<small>加 LINE 或來信</small></span>
+        </div>
+        <div class="cta-arrow">→</div>
+        <div class="cta-step">
+          <span class="step-num">②</span>
+          <span class="step-text">工程師當天回覆<small>直接附選型與報價</small></span>
+        </div>
+        <div class="cta-arrow">→</div>
+        <div class="cta-step">
+          <span class="step-num">③</span>
+          <span class="step-text">確認規格出貨<small>現貨即出 / 30–45 天</small></span>
+        </div>
       </div>
-      <div class="cta-id">LINE ID：@420gwmyt</div>
     </div>
     <div class="cta-contact">
       <div class="name">Eadon 謝宗穎</div>
